@@ -82,7 +82,7 @@ body {
     margin-right: 10px;
     text-decoration: none;
 }
-.extracted-data-repos .repo .data_repo .repo-name:hover {
+.extracted-data-repos .repo .data_repoff .repo-name:hover {
     text-decoration:line-through;
 }
 
