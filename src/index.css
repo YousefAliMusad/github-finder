@@ -1,0 +1,202 @@
+:root {
+    --width-of-side:35%
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Changa', sans-serif;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    text-decoration: none;
+}
+body {
+    padding: 20px 0;
+}
+.home-section {
+    width: 85%
+}
+.extracted-data {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 30px;
+}
+.extracted-data-section {
+    background-color: white;
+    box-shadow: 0 0 50px rgba(18, 18, 18, 0.1);
+    padding: 15px;
+}
+.extracted-data-info {
+    width: var(--width-of-side);
+}
+
+.avater-img img{
+    width:100%
+}
+
+.extracted-data-repos {
+    width: calc(100% - var(--width-of-side));
+    cursor: pointer;
+}
+.datalis-section div{
+    margin-top: 10px;
+    font-weight: 700;
+}
+.datalis-section div span{
+    font-weight: 400;
+}
+.extracted-data-repos {
+    display: flex;
+    flex-direction: column;
+}
+.extracted-data-repos .repo{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(249, 248, 248);
+    /* box-shadow: 0 0 20px rgba(18, 18, 18, 0.07); */
+    transition: 0.3s ease-in-out;
+}
+
+.extracted-data-repos .repo .data_repo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.repo-vispil{
+    padding: 3px 9px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.extracted-data-repos .repo .data_repo_more{
+    display: flex;
+    align-items: center;
+}
+.extracted-data-repos .repo .data_repo_more .repo-lang{
+    margin-right: 10px;
+    text-decoration: none;
+}
+.extracted-data-repos .repo .data_repo .repo-name:hover {
+    text-decoration:line-through;
+}
+
+.extracted-data-repos .repo .data_repo .repo-name{
+    text-decoration: none;
+}
+.extracted-data-repos .repo .data_repo .repo-name:hover {
+    text-decoration:wavy;
+}
+.extracted-data-repos .repo .data_repo_more .repo-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:1050px) {
+    .home-section {
+        width: 95%
+    }
+}
+@media (max-width:980px) {
+    .home-section {
+        width: 100%
+    }
+    .datalis-section div {
+        font-size: 1.8vw;
+    }
+}
+@media (max-width:850px) {
+    .datalis-section div {
+        font-size: 16px;
+    }
+    .extracted-data-info {
+        display: flex;
+        align-items: center;
+        height: 250px;
+        margin-bottom: 50px;
+    }
+    .extracted-data-section {
+        width: 100%;
+    }
+    .extracted-data {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        column-gap: 30px;
+    }
+    .datalis-section{
+        margin-left: 50px;
+    }
+    .avater-img {
+        height: 100%;
+        width: fit-content;
+    }
+    .avater-img img {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width:600px) {
+    .datalis-section {
+        margin-left: 20px;
+    }
+}
+.repo-vispil-2{
+    display: none;
+}
+@media (max-width:590px) {
+    .avater-img {
+        width: 100%;
+    }
+    
+    .avater-img img {
+        width: 100%;
+        height: 100%;
+    }
+    .datalis-section {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .extracted-data-info {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .repo-vispil-1 {
+        display: none;
+    }
+    .data_repo {
+        margin-bottom: 30px;
+    }
+    .repo-vispil-2 {
+        display: block;
+    }
+}
+@media (max-width:450px) {
+    .repo-name {
+        font-size: 3.8vw;
+    }
+}
+
+
+/* Header */
+header .eye-parent{
+    animation: toggle-eye infinite cubic-bezier(0.785, 0.135, 0.15, 0.86) ;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+@keyframes toggle-eye {
+    100% {
+        height: 50px;
+    }
+    100% {
+        height: 0px;
+    }
+}
