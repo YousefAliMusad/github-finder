@@ -53,7 +53,7 @@ const FetchRepos = ()=>{
         <>
         <div className="home-section ps-4 pe-4 " style={{margin:"0 auto"}}>
             <div className="search-bar d-flex" style={{justifyContent:"center", alignItems:"center"}}>
-                <input defaultValue="elzerowebschool" type="text" onChange={(e)=> setinput(e.target.value)} placeholder="Enter User Name" style={{width:"calc(100% - 120px)", height:"50px", border:"1px solid black", outline:"none", padding:"10px"}}/>
+                <input type="text" onChange={(e)=> setinput(e.target.value)} placeholder="Enter User Name" style={{width:"calc(100% - 120px)", height:"50px", border:"1px solid black", outline:"none", padding:"10px"}}/>
                 <button onClick={()=> CheckUser()} style={{width:"120px", height:"50px", background:"rgb(32,32,32)", color:"white" , border:"1px solid black", borderRadius:"0"}}>Search</button>
             </div>
 
@@ -67,8 +67,8 @@ const FetchRepos = ()=>{
                             <div>Profile Name : <span>{userData.login ? userData.login : "No Data" }</span></div>
                             <div>Public Repos : <span>{userData.public_repos ? userData.public_repos : "No Data" }</span></div>
                             <div>Joind on : <span>{help ? help : "No Data" }</span></div>
-                            <div>Followers : <span>{userData.followers ? userData.followers : "No Data" }</span></div>
-                            <div>Following : <span>{userData.following ? userData.following : "No Data" }</span></div>
+                            <div>Followers : <span>{userData.followers ? userData.followers : "0" }</span></div>
+                            <div>Following : <span>{userData.following ? userDanta.following : "0" }</span></div>
                         </div>
                 </div>
 
